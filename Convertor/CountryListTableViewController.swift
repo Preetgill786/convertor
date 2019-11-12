@@ -18,7 +18,7 @@ func itemDetailViewControllerDidCancel(_ controller: CountryListTableViewControl
 class CountryListTableViewController: UITableViewController{
  var username:String = ""
     //@IBOutlet weak var usernamelabel: UILabel!
-    let CountryNames = ["USA" , "INDIA" , "CHINA" , "CANADA"]
+    let CountryNames = ["🇺🇸 USD" , " 🇮🇳 Rupee" , "🇪🇺 EURO" , "🇨🇦 CAD"]
     
     override func viewDidLoad()
     {
@@ -30,7 +30,7 @@ class CountryListTableViewController: UITableViewController{
         return 1
     }
 
-//     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
             return CountryNames.count
@@ -40,10 +40,9 @@ class CountryListTableViewController: UITableViewController{
         UITableViewCell
         {
         let cell = tableView.dequeueReusableCell(
-        withIdentifier: "countryList",for: indexPath)
-            //cell.textLabel?.text = "hgjghjghj"
-            cell.textLabel?.text = CountryNames[indexPath.row]
-            cell.textLabel?.text = CountryNames[indexPath.row]
+        withIdentifier: "countryList",for: indexPath) 
+            print("Hello")
+             cell.textLabel?.text = CountryNames[indexPath.row]
             return cell
         }
     
